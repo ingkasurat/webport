@@ -1,0 +1,306 @@
+*{
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+img::selection{
+    background-color: transparent;
+}
+.sel::selection {
+    color: rgb(255, 255, 255);
+    background-color: plum;
+  }
+/*background*/
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right,#dcd6ff,#dcd6ff,#fffef8,#fffef8,#d6f0ff,#fffef8,#fffef8,
+    #deffef,#fffef8,#fffef8,#fffaf0,#fffef8,#fffef8,#ffeded,#ffeded,#fffef8,#fffef8,#ffdede,#ffdede);
+    background-size: 1500% 100%;
+    animation: bgmv 45s ease-in-out infinite;
+}
+@keyframes bgmv {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.bubbles{
+    position: relative;
+    display: flex;
+}
+.bubbles span{
+    position: relative;
+    width: 10vh;
+    height: 5vh;
+    background: pink;
+    margin: 0;
+    border-radius: 50%;
+    animation: floatingBubbles 15s linear infinite;
+    animation-duration: calc(200s/var(--i))
+}
+.bubbles span:nth-child(4n-7){
+    background: #fffaf0;
+}
+.bubbles span:nth-child(4n-9){
+    background: #d6f0ff;
+}
+@keyframes floatingBubbles {
+    0% {
+        transform: translateY(99vh) scale(0);
+    }
+    100% {
+        transform: translateY(5vh) scale(1);
+    }
+    
+}
+/*disc*/
+.disc{
+    position: absolute;
+    width: 7vh;
+    height: 7vh;
+    margin: 0 3vh;
+    border-radius: 50%;
+    top: 4vh;
+    left: 2vh;
+    background-image: linear-gradient(to bottom right, #f08da9,#fee3b8,#bce4e3,#a6dae8,#b9b2dc
+    ,#ebc8d5,#f08da9);
+    animation: spinning 8s linear infinite;
+}
+.disc::selection{
+    background-color: transparent;
+}
+.discholder{
+    position: absolute;
+    width: 8.5vh;
+    height: 8.5vh;
+    margin: 0 3vh;
+    border-radius: 50%;
+    top: 3.25vh;
+    left: 1.25vh;
+    background-color: #b9b2dc;
+    animation: spinning 8s linear infinite;
+}
+.discholder2{
+    position: absolute;
+    width: 22vh;
+    height: 8.2vh;
+    top: 3.4vh;
+    left: 8vh;
+    background-color: white;
+}
+.discholder3{
+    position: absolute;
+    width: 8.2vh;
+    height: 8.2vh;
+    margin: 0 3vh;
+    border-radius: 50%;
+    top: 3.45vh;
+    left: 22.6vh;
+    background-color: white;
+}
+@keyframes spinning {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.sd1{
+    position: absolute;
+    color: #b9b2dc;
+    font-size: 1.3vh;
+    font-family: cursive;
+    top: 4vh;
+    left: 14vh;
+}
+.sd1::before{
+    content: "now playing";
+    animation: changenowplaying 3s infinite;
+}
+@keyframes changenowplaying {
+    0% {
+        content: "now playing.";
+    }
+    25% {
+        content: "now playing.";
+    }
+    50% {
+        content: "now playing..";
+    }
+    75% {
+        content: "now playing...";
+    }
+}
+.sd2{
+    position: absolute;
+    color: #b9b2dc;
+    font-size: 1.7vh;
+    font-family: cursive;
+    top: 6vh;
+    left: 14vh;
+}
+.sd3{
+    position: absolute;
+    color: #b9b2dc;
+    font-size: 1.3vh;
+    font-family: cursive;
+    top: 8.3vh;
+    left: 14vh;
+}
+/*end disc*/
+
+.skill{
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10vh;
+    color:#b9b2dc;
+    font-weight: 800;
+    top: 20vh;
+    left: 45vw;
+}
+.line{
+    position: absolute;
+    width: 80vw;
+    height: 0.7vh;
+    top: 32vh;
+    left: 10vw;
+    background-color: #b9b2dc;
+} 
+
+.back{
+    position: absolute;
+    width: 80vw;
+    height: 55vh;
+    top: 35vh;
+    left: 10vw;
+    opacity: 70%;
+    background-color: #b9b2dc;
+} 
+
+.htm{
+    position: absolute;
+    width: 10vw;
+    top: 45vh;
+    left: 20vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fffaf0;
+    background-color: transparent;
+} 
+.hds{
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 5vh;
+    color:white;
+    font-weight: 800;
+    top: 69vh;
+    left: 20vw;
+}
+.csc{
+    position: absolute;
+    width: 10vw;
+    top: 45vh;
+    left: 70vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fffaf0;
+    background-color: transparent;
+} 
+.csds{
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 5vh;
+    color:white;
+    font-weight: 800;
+    top: 69vh;
+    left: 70vw;
+}
+.cpp{
+    position: absolute;
+    width: 10vw;
+    top: 37vh;
+    left: 45vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fffaf0;
+    background-color: transparent;
+} 
+.cds{
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 5vh;
+    color:white;
+    font-weight: 800;
+    top: 61vh;
+    left: 45.5vw;
+}
+.btnhome{
+    font-size: 2.2vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    left: 45vw;
+    top: 75vh;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s;
+}
+.btnhome::selection {
+    color: rgb(255, 255, 255);
+    background-color: #b9b2dc;
+  }
+.btnhome:hover {
+    transform: translateX(1vh);
+    color: rgb(255, 255, 255);
+    background-color: pink;
+}
+
+.btnabt{
+    font-size: 2.2vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    left: 45vw;
+    top: 70vh;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s;
+}
+.btnabt::selection {
+    color: rgb(255, 255, 255);
+    background-color: #b9b2dc;
+}
+.btnabt:hover {
+    transform: translateX(1vh);
+    color: rgb(255, 255, 255);
+    background-color: pink;
+}
+.btnedu{
+    font-size: 2.2vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    left: 45vw;
+    top: 72.5vh;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s;
+}
+.btnedu::selection {
+    color: rgb(255, 255, 255);
+    background-color: #b9b2dc;
+}
+.btnedu:hover {
+    transform: translateX(1vh);
+    color: rgb(255, 255, 255);
+    background-color: pink;
+}
